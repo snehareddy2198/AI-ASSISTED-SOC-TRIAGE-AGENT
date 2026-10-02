@@ -1,0 +1,31 @@
+{
+  "alerts": [
+    {
+      "source": "Example Identity Provider",
+      "sourceEventId": "sample-login-001",
+      "severity": "High",
+      "title": "Unfamiliar sign-in followed by token use",
+      "description": "A user authenticated from a new network and immediately accessed a sensitive application.",
+      "entities": ["user:alex@example.test", "ip:198.51.100.48"],
+      "technique": "T1078"
+    },
+    {
+      "source": "Example Cloud Audit",
+      "sourceEventId": "sample-cloud-002",
+      "severity": "Critical",
+      "title": "Mailbox forwarding rule created",
+      "description": "A forwarding rule was created for the same user from the new session.",
+      "entities": ["user:alex@example.test", "resource:finance-mailbox"],
+      "technique": "T1114"
+    },
+    {
+      "source": "Example Endpoint Monitor",
+      "sourceEventId": "sample-endpoint-003",
+      "severity": "Medium",
+      "title": "Unusual script interpreter launched",
+      "description": "A script interpreter was launched by an uncommon parent process.",
+      "entities": ["user:jordan@example.test", "host:design-laptop-07"],
+      "technique": "T1059"
+    }
+  ]
+}
